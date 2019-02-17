@@ -102,6 +102,7 @@ int main()
                         {
                             A[i].nd[j]=1+rand()%10; // generuoju nuo 1 iki 10
                             A[i].sum+=A[i].nd[j];
+                          
 
                         }
 
@@ -136,10 +137,13 @@ int main()
 
                     std::cout<<"Iveskite "<<i+1<<" -ojo mokinio egzamino pazymi"<<std::endl;
                     std::cin>>A[i].egz;
-                    while(A[i].egz!=1 &&A[i].egz!=2 && A[i].egz!=3 && A[i].egz!=4 && A[i].egz!=5 && A[i].egz!=6 && A[i].egz!=7 && A[i].egz!=8 && A[i].egz!=9 && A[i].egz!=10)
+                    while(std::cin.fail() or A[i].egz<1 or A[i].egz>10)
                     {
-                        std::cout<<"Iveskite mokinio egzamino pazymi naudodami tik skaicius nuo 1 iki 10 imtinai"<<std::endl;
-                        std::cin>>A[i].egz;
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                        
+                        std::cout << "Blogas bandymas.  Iveskite egzamino pazymi: ";
+                        std::cin >>A[i].egz;
                     }
 
                     A[i].gal=0.4*A[i].vid+0.6*A[i].egz;
