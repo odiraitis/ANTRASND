@@ -264,51 +264,40 @@ int main()
         std::ifstream in ("kursiokai.txt");
         while(in>>B[i].test) // kol galiu skaityt ir kol lygu nuliui didinu indeksa ir vykdau skaiciavimus
         {
-
             if(B[i].test==0)
             {
-
-               
-                A.push_back(mok());
-                nr++;
-                in>>B[i].vard>>B[i].pav;
-               
-                std::vector<int>pazymiai;
                 int sk=0;
-
-
-                while(true)
+                A.push_back(mok());
+               in>>B[i].vard>>B[i].pav;
+               std::vector<int>pazymiai;
+               while(true)
                 {
                     in>>temp;
                     int ivedu=temp;
-
                     if(ivedu>0 && ivedu<=10)
                     {
                         pazymiai.push_back(int()); // ivedinejant pazymi pushinu
                         pazymiai[sk]=ivedu;
 
                         sk++; // didinu nd pazymiu skaiciu
-
+                        
                     }
                     else
                     {
-                        //std::cin.clear();
-                       //std::cin.ignore();
+                       std::cin.clear();
+                       std::cin.ignore();
+
                         break;
                     }
-
-
                 }
-              
                 A[i].media=mediana(pazymiai,sk-1);
                 A[i].vid=vidurkis(pazymiai,sk-1);
                 egz=pazymiai[sk-1];
                 A[i].gal=0.4*A[i].vid+0.6*egz;
                 A[i].galm=0.4*A[i].media+0.6*egz;
-                
+                  nr++;
                 i++;
-
-                break;
+               // break;
             }
             else break;
 
@@ -327,7 +316,14 @@ int main()
             if(B[i].pav.size()>did_pav) // ieskau ilgiausios pavardes
                 did_pav=B[i].pav.size();
         }
-
+        for (int a=0; a<nr-1; a++)
+            for (int i=a+1; i<nr; i++)
+                if (B[i].vard>B[a].vard)
+                {
+                      std::swap(a,i);
+                }
+        
+        
         std::cout<<std::left<<std::setw(did_vard+1)<<"Vardas ";
         std::cout<<std::left<<std::setw(did_pav+1)<<"Pavarde ";
         std::cout<<"Galutinis (Vid.)";
