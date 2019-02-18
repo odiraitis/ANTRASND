@@ -2,7 +2,7 @@
 
 Ikeltas pirmas release ir antras release
 
-Jei norite skaityti is duomenu failo spauskite 1, jei ne tai spauskite 2. (Duomenu faile butinai pirmas skaicius kiekvienoj eilutej turi buti 0, jei norite, kad neskaitytu kitu, pries eilute parasykite bet koki kita simboli)
+Jei norite skaityti is duomenu failo spauskite 1, jei ne tai spauskite 2.
 
 Pirmiausia reikia spausti bet koki simboli tik ne 'f', kad galetumete ivesti nauja mokini.
 
