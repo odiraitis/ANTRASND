@@ -35,10 +35,10 @@ Sutvarkyta, jog nebutu naudojamos bereikalingos iš karto priskirto dydžio stru
 ### :rocket:[V0.5](https://github.com/odiraitis/ANTRASND/releases/tag/v0.5) release su atskirais konteineriais.
 -------------------------------------------------------------------------------
 
-V0.5.zip faile yra užduotys su:
--std::deque
--std::list
--std::vector
+V0.5.zip faile yra užduotys su:  
+-std::deque. 
+-std::list. 
+-std::vector. 
 
 Atskirus konteinerius naudoju tik kiečiukų ir nuskriaustukų kaupimui bei jų išvedimui.
 Su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus.
