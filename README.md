@@ -1,6 +1,7 @@
 # ANTRASND
 
-*[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1)  release su masyvais.
+### Motivation :rocket:[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1)  release su masyvais.
+-------------------------------------------------------------------------------
 
 Jei norite skaityti is duomenu failo spauskite 1, jei ne tai spauskite 2.
 
