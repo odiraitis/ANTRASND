@@ -42,3 +42,7 @@ V0.5.zip faile yra užduotys su:
 
 Atskirus konteinerius naudoju tik kiečiukų ir nuskriaustukų kaupimui bei jų išvedimui.
 Su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus.
+
+-------------------------------------------------------------------------------
+
+Galutinė versija yra main.cpp (pagrindinis kodas), funkc.cpp (funkcijų failas), header.h (headerių failas) ir makefile failuose.
