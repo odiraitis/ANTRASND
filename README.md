@@ -41,7 +41,12 @@ V0.5.zip faile yra užduotys su:
 - std::vector.   
 
 Atskirus konteinerius naudoju tik kiečiukų ir nuskriaustukų kaupimui bei jų išvedimui.
-Su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus. **Todėl mano repozitorijoj bus failai tik su vektorium, su listu ir deque bus galima rasti V0.5 release esančiame zip faile.**
+Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus. **Todėl mano repozitorijoj bus failai tik su vektorium, su listu ir deque bus galima rasti V0.5 release esančiame zip faile.**
 
+-------------------------------------------------------------------------------
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/v1.0) release su kitu būdu nei naudojau ankstesniuose release.
+-------------------------------------------------------------------------------
+1) Būdas įgyvendintas ankstesniuose release, geriausiai veikia su std::vector.
+2) Būdas įgyvendintas V1.0 release, geriausiai veikia su std::list, nes su std::vector ir std::deque reikia perstumdyti elementus.
 -------------------------------------------------------------------------------
 
