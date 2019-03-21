@@ -41,7 +41,36 @@ V0.5.zip faile yra užduotys su:
 - std::vector.   
 
 Atskirus konteinerius naudoju tik kiečiukų ir nuskriaustukų kaupimui bei jų išvedimui.
-Su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus. **Todėl mano repozitorijoj bus failai tik su vektorium, su listu ir deque bus galima rasti V0.5 release esančiame zip faile.**
+Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus. **Todėl mano repozitorijoj bus failai tik su vektorium, su listu ir deque bus galima rasti V0.5 release esančiame zip faile.**
 
 -------------------------------------------------------------------------------
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/v1.0) release su kitu būdu nei naudojau ankstesniuose release.
+-------------------------------------------------------------------------------
+
+**1 strategija** Būdas įgyvendintas ankstesniuose release, geriausiai veikia su std::vector
+
+| std::vector | std::deque | std::list |
+|:---:|:---:|:---:|
+| 0.85s | 0.86s | 0.89s |
+
+**2 strategija** Būdas įgyvendintas V1.0 release, geriausiai veikia su std::list, nes su std::vector ir std::deque reikia perstumdyti elementus.
+
+| std::vector | std::deque | std::list |
+|:---:|:---:|:---:|
+| 78.0s | 75.0s | 0.85s |
+
+ **2 strategija su algoritmais** Pridėti algoritmai, taigi greičiausiai veikia vektorius.
+
+| std::vector | std::deque | std::list |
+|:---:|:---:|:---:|
+| 0.79s | 0.86s | 0.85s |
+
+Naudojau `remove_if` ir `remove_copy_if`
+```c++
+remove_copy_if(A.begin(), A.end(),
+                       back_inserter(lievi), negavoSkolos);
+        A.erase(remove_if(A.begin(), A.end(),
+                        gavoSkolos), A.end());
+```
+
 
