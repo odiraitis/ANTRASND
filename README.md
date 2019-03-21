@@ -58,7 +58,7 @@ Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::
 | std::vector | std::deque | std::list |
 |:---:|:---:|:---:|
 | 78.0s | 75.0s | 0.85s |
-### :rocket:[V1.0] (https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) release 2 strategija su algoritmais.
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) release 2 strategija su algoritmais.
 -------------------------------------------------------------------------------
  **2 strategija su algoritmais** Pridėti algoritmai, taigi greičiausiai veikia vektorius.
 
