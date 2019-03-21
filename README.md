@@ -65,4 +65,12 @@ Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::
 |:---:|:---:|:---:|
 | 0.79s | 0.86s | 0.85s |
 
+Naudojau `remove_if` ir `remove_copy_if`
+```c++
+remove_copy_if(A.begin(), A.end(),
+                       back_inserter(lievi), negavoSkolos);
+        A.erase(remove_if(A.begin(), A.end(),
+                        gavoSkolos), A.end());
+```
+
 
