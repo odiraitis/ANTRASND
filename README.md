@@ -1,8 +1,8 @@
 # ANTRASND
 
-### :rocket:[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1)  release su masyvais.
-
-### :rocket:[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1.2)  release su vektoriais.
+|### :rocket:[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1)  release su masyvais.|
+|
+|### :rocket:[V0.1](https://github.com/odiraitis/ANTRASND/releases/tag/v0.1.2)  release su vektoriais.|
 -------------------------------------------------------------------------------
 
 Jei norite įvesti naują mokinį spauskite bet kokį simboli tik ne **'f'**, paspaudus **f** baigiamas mokinių įvedinėjimas.
