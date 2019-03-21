@@ -8,7 +8,7 @@ int main()
     std::string kuris[500]; // generuoti su vidurkiu ar mediana
     std::string kazkas; // skaityt is failo ar ne
     
-    std::string testas;
+    char testas;
     std::string kurie; // generuoti skaicius ar vesti ranka
     std::vector <mok> A; // susikuriu vektoriu
     std::random_device rd;
@@ -24,11 +24,6 @@ int main()
     
     std::cout<<"Jei norite skaityti is failo spauskite 1, jei norite duomenis rinktis pats spauskite 2, jei norite sugeneruoti failus spauskite 3 ?";
     std::cin>>kazkas;
-    while(kazkas!="1" and kazkas!="2" and kazkas!="3")
-    {
-        std::cout<<"Jei norite skaityti is failo spauskite 1, jei norite duomenis rinktis pats spauskite 2, jei norite sugeneruoti failus spauskite 3 ?";
-        std::cin>>kazkas;
-    }
     if(kazkas=="2")
     {
         int i=0;
@@ -38,18 +33,13 @@ int main()
         while(std::cin>>testas)
         {
             
-            if(testas!="f")
+            if(testas!='f')
             {
                 A.push_back(mok());
                 nr++;
                 std::cout<<"Jei norite, kad pazymiai butu sugeneruoti spauskite 1, jei norite juos ivesti rankiniu budu, spauskite 2"<<std::endl;
                 while(std::cin>>kurie)
                 {
-                    while(kurie!="1" and kurie!="2")
-                    {
-                        std::cout<<"Jei norite, kad pazymiai butu sugeneruoti spauskite 1, jei norite juos ivesti rankiniu budu, spauskite 2"<<std::endl;
-                        std::cin>>kurie;
-                    }
                     
                     if(kurie=="1" or kurie=="2")
                     {
@@ -69,11 +59,10 @@ int main()
                         
                         if(kurie=="2")
                         {
-                            std::cout<<"Ivedus kiekviena skaiciu spauskite 'ENTER', norint baigti iveskite bet koki kita simboli ar skaiciu"<<std::endl;
+                            std::cout<<"Ivedus kiekviena skaiciu spauskite 'ENTER', norint baigti iveskite bet koki kita skaiciu"<<std::endl;
                             while(true)
                             {
                                 std::cin>>temp;
-                                
                                 int ivedu=temp;
                                 
                                 
@@ -100,12 +89,12 @@ int main()
                         {
                             std::cout<<"Iveskite, kiek norite sugeneruoti skaiciu "<<std::endl;
                             std::cin>>n;
-                            while(std::cin.fail() or n==0)
+                            while(std::cin.fail())
                             {
                                 std::cin.clear();
                                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                                 
-                                std::cout << "Blogas bandymas.  Iveskite skaiciu nelygu 0: ";
+                                std::cout << "Blogas bandymas.  Iveskite skaiciu: ";
                                 std::cin >> n;
                             }
                             
@@ -701,16 +690,17 @@ int main()
         std::vector<mok>kieti;
         std::vector<mok>lievi;
         auto start = std::chrono::high_resolution_clock::now();
+        remove_copy_if(A.begin(), A.end(),
+                       back_inserter(lievi), negavoSkolos);
+        A.erase(remove_if(A.begin(), A.end(),
+                          gavoSkolos), A.end());
         
-        std::vector<mok>::size_type r = 0;
-        while (r != A.size()) {
-            if (A[r].gal < 5 && A[r].galm < 5) {
-                lievi.push_back(A[r]);
-                A.erase(A.begin() + r);
-                //  std::cout<<A[r].gal<<" "<<A[r].galm<<std::endl;// ištrinti r-ąjį stud.
-            } else
-                ++r; // pereiti prie kito studento
-        }
+        
+        
+        /*   for (int i=0; i<=nr-1; i++)
+         {
+         
+         }*/
         for(int i=0; i<A.size(); i++)
         {
             kiet<<std::left<<std::setw(did_vard+1)<<A[i].vard;
@@ -733,6 +723,8 @@ int main()
         std::chrono::duration<double> diff = end-start;
         std::cout << "Failu generavimas ir nuskaitymas, paskirstymas uztruko: "
         << diff.count() << " s\n";
+        
+        
     }
     
     return 0;

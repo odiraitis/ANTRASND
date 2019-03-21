@@ -23,3 +23,12 @@ bool skaicius(const std::string &str) // Tikrinimas ar vien tik skaiciai
 {
     return std::all_of(str.begin(), str.end(), ::isdigit);
 }
+bool gavoSkolos( const mok & i )
+{
+    return (i.galm<5 && i.gal<5);
+}
+bool negavoSkolos( const mok & i )
+{
+    return (i.galm>=5 && i.gal>=5);
+}
+
