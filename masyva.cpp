@@ -73,7 +73,7 @@ int main()
                             while(true)
                             {
                                 std::cin>>temp;
-                             
+                                
                                 int ivedu=temp;
                                 
                                 
@@ -702,28 +702,21 @@ int main()
         std::vector<mok>lievi;
         auto start = std::chrono::high_resolution_clock::now();
         
-        for(k=0; k<nr; k++)
-        {
-            if(A[k].gal>=5 && A[k].galm>=5)
-            {
-                kieti.push_back(A[k]);
-            }
-            else if(A[k].gal<5 && A[k].galm<5)
-            {
-                lievi.push_back(A[k]);
-            }
+        std::vector<mok>::size_type r = 0;
+        while (r != A.size()) {
+            if (A[r].gal < 5 && A[r].galm < 5) {
+                lievi.push_back(A[r]);
+                A.erase(A.begin() + r);
+                //  std::cout<<A[r].gal<<" "<<A[r].galm<<std::endl;// ištrinti r-ąjį stud.
+            } else
+                ++r; // pereiti prie kito studento
         }
-        
-        /*   for (int i=0; i<=nr-1; i++)
-         {
-         
-         }*/
-        for(int i=0; i<kieti.size(); i++)
+        for(int i=0; i<A.size(); i++)
         {
-            kiet<<std::left<<std::setw(did_vard+1)<<kieti[i].vard;
-            kiet<<std::left<<std::setw(did_pav+1)<<kieti[i].pav;
-            kiet<<std::left<<std::setw(16)<<std::fixed<<std::setprecision(2)<<kieti[i].gal;
-            kiet<<std::left<<std::setw(5)<<std::fixed<<std::setprecision(2)<<kieti[i].galm;
+            kiet<<std::left<<std::setw(did_vard+1)<<A[i].vard;
+            kiet<<std::left<<std::setw(did_pav+1)<<A[i].pav;
+            kiet<<std::left<<std::setw(16)<<std::fixed<<std::setprecision(2)<<A[i].gal;
+            kiet<<std::left<<std::setw(5)<<std::fixed<<std::setprecision(2)<<A[i].galm;
             kiet<<std::endl;
         }
         for(int i=0; i<lievi.size(); i++)
