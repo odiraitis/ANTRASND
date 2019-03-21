@@ -74,4 +74,4 @@ remove_copy_if(A.begin(), A.end(),
                         gavoSkolos), A.end());
 ```
 
-
+**[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) ATSISIŲSTI folderį, norint paleisti nueiti į folderį Terminalu ir parašyti make, tuomet ./main , kad paleistų ir viską baigus, jog neliktų seni failai, make clean (išvalyti visus .txt ir .o failus)**
