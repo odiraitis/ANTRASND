@@ -44,7 +44,7 @@ Atskirus konteinerius naudoju tik kiečiukų ir nuskriaustukų kaupimui bei jų 
 Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::vector** veikia greičiausiai, su **std::list** veikia lėčiausiai. Taigi labiausiai apsimoka naudoti vektorius, list nepatariu, nes jų sintaksė gana sudėtinga, o ir pats būdas ne toks efektyvus. **Todėl mano repozitorijoj bus failai tik su vektorium, su listu ir deque bus galima rasti V0.5 release esančiame zip faile.**
 
 -------------------------------------------------------------------------------
-### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/v1.0) release su kitu būdu nei naudojau ankstesniuose release.
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/v1.0) release 2 strategija be algoritmų.
 -------------------------------------------------------------------------------
 
 **1 strategija** Būdas įgyvendintas ankstesniuose release, geriausiai veikia su std::vector
@@ -58,7 +58,8 @@ Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::
 | std::vector | std::deque | std::list |
 |:---:|:---:|:---:|
 | 78.0s | 75.0s | 0.85s |
-
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/v1.1) release 2 strategija su algoritmais.
+-------------------------------------------------------------------------------
  **2 strategija su algoritmais** Pridėti algoritmai, taigi greičiausiai veikia vektorius.
 
 | std::vector | std::deque | std::list |
