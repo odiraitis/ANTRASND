@@ -83,4 +83,5 @@ Su std::vector insertint i vektoriaus pradzia nera efektyvu, taciau su std::dequ
 |:---:|:---:|
 | 310s | 1.09s |
 
+Taip yra todel nes insert funkcija kiekviena karta tikrina 3 variantus(iterpti i norima vieta, iterpti i prieki, iterpti i gala), o push front tiesiog neturi nieko tikrint ir kelia i prieki.
 **[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) ATSISIŲSTI folderį, norint paleisti nueiti į folderį Terminalu ir parašyti make, tuomet ./main , kad paleistų ir viską baigus, jog neliktų seni failai, make clean (išvalyti visus .txt ir .o failus)**
