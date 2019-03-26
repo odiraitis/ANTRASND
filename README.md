@@ -75,4 +75,12 @@ remove_copy_if(A.begin(), A.end(),
 ```
 
 --------------------------------------------------------------------------------
+### :rocket:[PAPILDOMA](https://github.com/odiraitis/ANTRASND/releases/tag/V1.2).
+
+Su std::vector insertint i vektoriaus pradzia nera efektyvu, taciau su std::deque galima push frontint, taip uzduotis atliekama daug greiciau.
+
+| std::vector | std::deque |
+|:---:|:---:|
+| 310s | 1.09s |
+
 **[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) ATSISIŲSTI folderį, norint paleisti nueiti į folderį Terminalu ir parašyti make, tuomet ./main , kad paleistų ir viską baigus, jog neliktų seni failai, make clean (išvalyti visus .txt ir .o failus)**
