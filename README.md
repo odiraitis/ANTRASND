@@ -20,6 +20,8 @@ Toliau reiks ivesti egzamino pazymi, bei mokinio varda, pavarde.
 ### :rocket:[V0.2](https://github.com/odiraitis/ANTRASND/releases/tag/v0.2.3) release su skaitymu iš failo.
 -------------------------------------------------------------------------------
 
+Realizacija skaitant is failo "kursiokai.txt".
+
 Jei norite skaityti is duomenu failo spauskite **1**, jei ne tai spauskite **2**.
 
 ### :rocket:[V0.3](https://github.com/odiraitis/ANTRASND/releases/tag/v0.3) release su išskaidyta programa į funkc.cpp header.h main.cpp .
