@@ -20,6 +20,8 @@ Toliau reiks ivesti egzamino pazymi, bei mokinio varda, pavarde.
 ### :rocket:[V0.2](https://github.com/odiraitis/ANTRASND/releases/tag/v0.2.3) release su skaitymu iš failo.
 -------------------------------------------------------------------------------
 
+Realizacija skaitant is failo "kursiokai.txt".
+
 Jei norite skaityti is duomenu failo spauskite **1**, jei ne tai spauskite **2**.
 
 ### :rocket:[V0.3](https://github.com/odiraitis/ANTRASND/releases/tag/v0.3) release su išskaidyta programa į funkc.cpp header.h main.cpp .
@@ -75,4 +77,13 @@ remove_copy_if(A.begin(), A.end(),
 ```
 
 --------------------------------------------------------------------------------
+### :rocket:[PAPILDOMA](https://github.com/odiraitis/ANTRASND/releases/tag/V1.2).
+
+Su std::vector insertint i vektoriaus pradzia nera efektyvu, taciau su std::deque galima push frontint, taip uzduotis atliekama daug greiciau.
+
+| std::vector | std::deque |
+|:---:|:---:|
+| 310s | 1.09s |
+
+Taip yra todel nes insert funkcija kiekviena karta tikrina 3 variantus(iterpti i norima vieta, iterpti i prieki, iterpti i gala), o push front tiesiog neturi nieko tikrint ir kelia i prieki.
 **[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) ATSISIŲSTI folderį, norint paleisti nueiti į folderį Terminalu ir parašyti make, tuomet ./main , kad paleistų ir viską baigus, jog neliktų seni failai, make clean (išvalyti visus .txt ir .o failus)**
