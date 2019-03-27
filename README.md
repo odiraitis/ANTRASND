@@ -60,13 +60,15 @@ Kadangi skaidau į du atskirus kiečiukų ir lievų konteinerius, tai su **std::
 | std::vector | std::deque | std::list |
 |:---:|:---:|:---:|
 | 78.0s | 75.0s | 0.85s |
-### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) release 2 strategija su algoritmais.
+### :rocket:[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.3) release 2 strategija su algoritmais.
 -------------------------------------------------------------------------------
  **2 strategija su algoritmais** Pridėti algoritmai, taigi greičiausiai veikia vektorius.
+ 
+**PAPILDYTA**
 
 | std::vector | std::deque | std::list |
 |:---:|:---:|:---:|
-| 0.79s | 0.86s | 0.85s |
+| 0.08s | 0.09s | 0.08s |
 
 Naudojau `remove_if` ir `remove_copy_if`
 ```c++
@@ -84,6 +86,13 @@ Su std::vector insertint i vektoriaus pradzia nera efektyvu, taciau su std::dequ
 | std::vector | std::deque |
 |:---:|:---:|
 | 310s | 1.09s |
+
+### :rocket:[PAPILDOMA](https://github.com/odiraitis/ANTRASND/releases/tag/V1.2) PAPILDOMOS PAPILDYMAS
+optimizavau programa (maina isskaidziau i funkcijas). Dabar programa veikia daug greiciau.
+
+| std::vector | std::deque |
+|:---:|:---:|
+| 5.3s | 0.08s |
 
 Taip yra todel nes insert funkcija kiekviena karta tikrina 3 variantus(iterpti i norima vieta, iterpti i prieki, iterpti i gala), o push front tiesiog neturi nieko tikrint ir kelia i prieki.
 **[V1.0](https://github.com/odiraitis/ANTRASND/releases/tag/V1.1) ATSISIŲSTI folderį, norint paleisti nueiti į folderį Terminalu ir parašyti make, tuomet ./main , kad paleistų ir viską baigus, jog neliktų seni failai, make clean (išvalyti visus .txt ir .o failus)**
