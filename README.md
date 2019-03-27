@@ -87,7 +87,7 @@ Su std::vector insertint i vektoriaus pradzia nera efektyvu, taciau su std::dequ
 |:---:|:---:|
 | 310s | 1.09s |
 
-### :rocket:[PAPILDOMA](https://github.com/odiraitis/ANTRASND/releases/tag/V1.2) PAPILDOMOS PAPILDYMAS
+### :rocket:[PAPILDOMA](https://github.com/odiraitis/ANTRASND/releases/tag/V1.4) PAPILDOMOS PAPILDYMAS
 optimizavau programa (maina isskaidziau i funkcijas). Dabar programa veikia daug greiciau.
 
 | std::vector | std::deque |
